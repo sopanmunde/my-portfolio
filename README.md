@@ -1,10 +1,10 @@
-# Magic Portfolio
+# Portfolio
 
-Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
+<!-- Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
 
 View the demo [here](https://demo.magic-portfolio.com).
 
-![Magic Portfolio](public/images/og/home.jpg)
+![Magic Portfolio](public/images/og/home.jpg) -->
 
 ## Getting started
 
@@ -15,12 +15,12 @@ git clone https://github.com/once-ui-system/magic-portfolio.git
 
 **2. Install dependencies**
 ```
-npm install
+bun install
 ```
 
 **3. Run dev server**
 ```
-npm run dev
+bun run dev
 ```
 
 **4. Edit config**
