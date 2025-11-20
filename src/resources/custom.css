@@ -1,7 +1,7 @@
 /* :root {
-  /*
+  
   /* Example setup for custom colors */
-/* Generate at: https://once-ui.com/customize */
+  /*Generate at: https://once-ui.com/customize */
 /*
   --scheme-brand-100: #08002f;
   --scheme-brand-200:  #04025c;
@@ -50,5 +50,5 @@
   --scheme-neutral-600-10: rgba(137,152,159,0.1);
   --scheme-neutral-600-30: rgba(137,152,159,0.3);
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
-  /*
-}*/
+  
+}  */

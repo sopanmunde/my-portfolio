@@ -49,7 +49,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building bridges between Data and Intelligence</>,
   featured: {
     display: true,
     title: (
@@ -65,7 +65,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Sopan, a Data Scientist engineer at{" "}
       <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
@@ -98,9 +98,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Sopan is a Software Developer specializing in AI/ML, Python, SQL, and data visualization. 
+        Experienced in building intelligent solutions such as an AI-powered Waste Management System. 
+        Skilled in GenAI, Agentic AI, and problem-solving, with a passion for creating impactful and scalable software innovations.
       </>
     ),
   },
@@ -114,12 +114,12 @@ const about: About = {
         role: "AI with Data Scientist",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Completed formal training in AI and Data Science, gaining expertise in Python, MySQL, 
+            and machine learning algorithms to design efficient data-driven solutions.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Built hands-on projects in predictive modeling and data cleaning, 
+            strengthening problem-solving skills in Python and delivering more accurate data analysis and insights.
           </>,
         ],
         images: [
@@ -133,18 +133,20 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Internship Studio",
+        timeframe: "2025 - 2025",
+        role: "Data Science Intern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Applied EDA, ML, and SQL with Python to enhance data analysis and support data-driven decision-making.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+           Built predictive models and designed data visualizations using Seaborn and Pandas, 
+           improving interpretation and presentation of insights.
           </>,
+          <>
+            Leveraged statistical analysis and feature engineering techniques to boost model accuracy and performance.
+          </>
         ],
         images: [],
       },
@@ -155,12 +157,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "DBatu University",
+        description: <>Studied Computer Science & engineering.</>,
       },
       {
         name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        description: <>Studied AI and personal branding.</>,
       },
     ],
   },
@@ -169,14 +171,14 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Python",
         description: (
           <>Able to prototype in Figma with Once UI with unnatural speed.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Python",
+            icon: "Python",
           },
         ],
         // optional: leave the array empty if you don't want to display images
