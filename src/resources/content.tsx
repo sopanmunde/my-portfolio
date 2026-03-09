@@ -65,14 +65,17 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Sopan, a Data Scientist engineer at{" "}
-      <Logo
+       {/* I'm Sopan, a Data Scientist engineer at{" "}
+       <Logo
         dark
-        icon="/trademarks/wordmark-dark.svg"
+        icon=""
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       />
       , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      <br /> user experiences. After hours, I build my own projects. */}
+
+      Turning data into intelligent solutions using AI, machine learning, and modern technologies. I build my own projects.{" "}
+
     </>
   ),
 };
@@ -108,9 +111,27 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
+    {
+        company: "Prushal Technology Pvt. Ltd.",
+        timeframe: "2025 - 2025",
+        role: "AIML Engineer Trainee",
+        achievements: [
+          <>
+            Applied EDA, ML, and SQL with Python to enhance data analysis and support data-driven decision-making.
+          </>,
+          <>
+           Built predictive models and designed data visualizations using Seaborn and Pandas, 
+           improving interpretation and presentation of insights.
+          </>,
+          <>
+            Leveraged statistical analysis and feature engineering techniques to boost model accuracy and performance.
+          </>
+        ],
+        images: [],
+      },
       {
-        company: "ACKVK",
-        timeframe: "2025 - Present",
+        company: "Acharya Chanakya Kaushal Vikas Kendra",
+        timeframe: "2025 - 2025",
         role: "AI with Data Scientist",
         achievements: [
           <>
@@ -123,13 +144,7 @@ const about: About = {
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // optional: leave the array empty if you don't want to display image
         ],
       },
       {
@@ -158,7 +173,7 @@ const about: About = {
     institutions: [
       {
         name: "DBatu University",
-        description: <>Studied Computer Science & engineering.</>,
+        description: <>Studied Computer Science & engineering at PES College of Engineering, Chatrapati Sambhajinagar.</>,
       },
       {
         name: "Build the Future",
@@ -171,32 +186,198 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Python",
+        title: "Artificial Intelligence / Machine Learning",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Transforming data into intelligent insights through machine learning and AI technologies.</>
         ),
         tags: [
           {
             name: "Python",
-            icon: "Python",
+            icon: "python",
           },
+
+          {
+            name: "SQL",
+            icon: "sql",
+          },
+
+          {
+            name: "Langchain",
+            icon: "langchain",
+          },
+
+          {
+            name: "Numpy",
+            icon: "numpy",
+          },
+
+          {
+            name: "Pandas",
+            icon: "pandas",
+          },
+
+          {
+            name: "Seaborn",
+            icon: "seaborn",
+          },
+
+          {
+            name: "Matplotlib",
+            icon: "matplotlib",
+          },
+
+          {
+            name: "Scikit-learn",
+            icon: "scikit-learn",
+          },
+
+          {
+            name: "OpenCV",
+            icon: "opencv",
+          },
+
+          {
+            name: "Llamaindex",
+            icon: "llamaindex",
+          },
+
+          {
+            name: "LangGraph",
+            icon: "langgraph",
+          },
+
+          {
+            name: "Hugging Face",
+            icon: "huggingface",
+          },
+
+          {
+            name: "LLMs",
+            icon: "llms",
+          },
+
+          {
+            name: "Ollama",
+            icon: "ollama",
+          },
+
+          {
+            name: "Pinecone",
+            icon: "pinecone",
+          },
+
+          {
+            name: "Vector DBs",
+            icon: "pinecone",
+          },
+
+          {
+            name: "OpenAI",
+            icon: "openai",
+          },
+
+          {
+            name: "LLaMA 2/3",
+            icon: "llama",
+          },
+
+          {
+            name: "Gemini",
+            icon: "gemini",
+          },  
+
+          {
+            name: "FastAPI",
+            icon: "fastapi",
+          },
+
+          {
+            name: "Pydantic",
+            icon: "pydantic",
+          },
+
+          {
+            name: "SQL Alchemy",
+            icon: "sql",
+          },
+
+
+
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+      },
+
+      {
+        title: "Cloud & DevOps",
+        description: (
+          <>Deploying and optimizing applications using cloud platforms and DevOps automation tools.</>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "AWS",
+            icon: "aws",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Docker (Basic)",
+            icon: "docker",
+          },
+          {
+            name: "Git",
+            icon: "git",
+          },
+
+          {
+            name: "GitHub",
+            icon: "github",
+          },
+          {
+            name: "CI/CD (Basic)",
+            icon: "cicd",
+          },
+
+        ],
+      },
+
+      {
+        title: "Databases",
+        description: (
+          <>Designing and managing database systems for scalable applications.</>
+        ),
+        tags: [
+          {
+            name: "MySQL",
+            icon: "mysql",
+          },
+          {
+            name: "MongoDB",
+            icon: "mongodb",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgresql",
+          },
+
+        ],
+      },
+
+      {
+        title: "Tools",
+        description: (
+          <>Analyzing data and creating dynamic dashboards for clear, data-driven decision making.</>
+        ),
+        tags: [
+          {
+            name: "Excel",
+            icon: "excel",
+          },
+          {
+            name: "PowerBI",
+            icon: "powerbi",
           },
         ],
       },
+
+
+      
       {
         title: "Next.js",
         description: (
@@ -210,19 +391,6 @@ const about: About = {
           {
             name: "Next.js",
             icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
           },
         ],
       },  
