@@ -11,8 +11,8 @@
   border-radius: 18px;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease;
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   width: 100%;
@@ -31,9 +31,18 @@
       0 24px 64px -12px rgba(0, 0, 0, 0.55),
       0 8px 24px -4px var(--brand-alpha-weak);
 
-    .shineBorder { opacity: 1; animation-play-state: running; }
-    .spotlight   { opacity: 1; }
-    .cardImage   { transform: scale(1.04); }
+    .shineBorder {
+      opacity: 1;
+      animation-play-state: running;
+    }
+
+    .spotlight {
+      opacity: 1;
+    }
+
+    .cardImage {
+      transform: scale(1.04);
+    }
 
     .titleText {
       background: linear-gradient(130deg, var(--neutral-on-background-strong) 30%, var(--brand-solid) 100%);
@@ -48,11 +57,9 @@
 .spotlight {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    var(--brand-alpha-weak),
-    transparent 70%
-  );
+  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      var(--brand-alpha-weak),
+      transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -65,15 +72,13 @@
   inset: -1px;
   border-radius: 19px;
   padding: 1px;
-  background: conic-gradient(
-    from var(--shine-angle, 0deg),
-    transparent 0deg,
-    var(--brand-alpha-weak) 40deg,
-    var(--brand-solid) 80deg,
-    var(--brand-alpha-weak) 120deg,
-    transparent 180deg,
-    transparent 360deg
-  );
+  background: conic-gradient(from var(--shine-angle, 0deg),
+      transparent 0deg,
+      var(--brand-alpha-weak) 40deg,
+      var(--brand-solid) 80deg,
+      var(--brand-alpha-weak) 120deg,
+      transparent 180deg,
+      transparent 360deg);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -125,7 +130,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.35s ease;
+    opacity 0.35s ease;
   /* translateX is set inline per-slide */
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -173,8 +178,13 @@
   }
 }
 
-.navPrev { left: 10px; }
-.navNext { right: 10px; }
+.navPrev {
+  left: 10px;
+}
+
+.navNext {
+  right: 10px;
+}
 
 /* ── Dot navigation ───────────────────────────── */
 .dotNav {
@@ -259,11 +269,9 @@
 /* ── Title ────────────────────────────────────── */
 .titleText {
   transition: all 0.35s ease;
-  background: linear-gradient(
-    130deg,
-    var(--neutral-on-background-strong),
-    var(--neutral-on-background-weak)
-  );
+  background: linear-gradient(130deg,
+      var(--neutral-on-background-strong),
+      var(--neutral-on-background-weak));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -360,14 +368,20 @@
   text-decoration: none;
   cursor: pointer;
 
-  svg { flex-shrink: 0; transition: transform 0.18s ease; }
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.18s ease;
+  }
 
   &:hover {
     background: var(--neutral-alpha-medium);
     border-color: var(--neutral-alpha-strong);
     color: var(--neutral-on-background-strong);
     transform: translateY(-1px);
-    svg { transform: translateX(2px); }
+
+    svg {
+      transform: translateX(2px);
+    }
   }
 
   &.primary {
@@ -384,8 +398,13 @@
 
 /* ── Keyframes ────────────────────────────────── */
 @keyframes rotateShineBorder {
-  from { --shine-angle: 0deg; }
-  to   { --shine-angle: 360deg; }
+  from {
+    --shine-angle: 0deg;
+  }
+
+  to {
+    --shine-angle: 360deg;
+  }
 }
 
 @property --shine-angle {

@@ -182,9 +182,13 @@
 /* ── Legacy ───────────────────────────────────── */
 .hover {
   transition: var(--transition-micro-medium);
+
   &:hover {
     transform: translateX(var(--static-space-8));
-    .indicator { transform: rotate(0); }
+
+    .indicator {
+      transform: rotate(0);
+    }
   }
 }
 

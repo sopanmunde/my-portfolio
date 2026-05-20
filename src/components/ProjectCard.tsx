@@ -80,8 +80,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           ) : (
             <div className={styles.imagePlaceholder}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.3">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21,15 16,10 5,21"/>
+                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21,15 16,10 5,21" />
               </svg>
             </div>
           )}
@@ -92,12 +92,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <>
             <button className={`${styles.navBtn} ${styles.navPrev}`} onClick={prev} aria-label="Previous image">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6"/>
+                <polyline points="15 18 9 12 15 6" />
               </svg>
             </button>
             <button className={`${styles.navBtn} ${styles.navNext}`} onClick={next} aria-label="Next image">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6"/>
+                <polyline points="9 18 15 12 9 6" />
               </svg>
             </button>
 
@@ -161,7 +161,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <a className={`${styles.actionLink} ${styles.primary}`} href={href}>
               Read case study
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           )}
@@ -169,7 +169,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <a className={styles.actionLink} href={link} target="_blank" rel="noopener noreferrer">
               View project
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /><polyline points="15,3 21,3 21,9" /><line x1="10" y1="14" x2="21" y2="3" />
               </svg>
             </a>
           )}
