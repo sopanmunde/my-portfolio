@@ -1,6 +1,7 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Row, Schema, Text } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import styles from "./work.module.css";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -14,7 +15,7 @@ export async function generateMetadata() {
 
 export default function Work() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column maxWidth="m" paddingTop="24" gap="xl">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -28,9 +29,32 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="heading-strong-xl" align="center">
-        {work.title}
-      </Heading>
+
+      {/* Hero Header */}
+      <Column fillWidth horizontal="center" align="center" gap="m" className={styles.heroSection}>
+        <div className={styles.heroLabel}>
+          <span className={styles.heroDot} />
+          Portfolio
+        </div>
+        <Heading
+          variant="display-strong-xl"
+          align="center"
+          wrap="balance"
+          className={styles.heroHeading}
+        >
+          Selected Work
+        </Heading>
+        <Text
+          variant="body-default-l"
+          onBackground="neutral-weak"
+          align="center"
+          wrap="balance"
+          className={styles.heroSub}
+        >
+          A curated collection of projects in AI, Machine Learning, and Software Engineering.
+        </Text>
+      </Column>
+
       <Projects />
     </Column>
   );

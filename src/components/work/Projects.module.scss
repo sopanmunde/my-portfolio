@@ -2,22 +2,42 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  &.visible {
+    opacity: 1;
+  }
 }
 
+/* ── Controls Bar ─────────────────────────────── */
 .controlsContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.75rem 1.25rem;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
   background: var(--neutral-alpha-weak);
-  border: 1px solid var(--neutral-alpha-weak);
+  border: 1px solid var(--neutral-alpha-medium);
   border-radius: 14px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   width: 100%;
+  position: relative;
+
+  // Subtle top border accent
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brand-alpha-medium), transparent);
+    border-radius: 1px;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -25,36 +45,52 @@
   }
 }
 
+.filterLabel {
+  font-size: 0.75rem;
+  font-family: var(--font-label);
+  font-weight: 500;
+  color: var(--neutral-on-background-weak);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 0.25rem;
+  opacity: 0.6;
+}
+
 .filtersWrapper {
   display: flex;
+  align-items: center;
   gap: 0.4rem;
   flex-wrap: wrap;
 }
 
 .filterChip {
-  padding: 0.3rem 0.9rem;
+  padding: 0.28rem 0.8rem;
   border-radius: 9999px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-family: var(--font-label);
   font-weight: 500;
   cursor: pointer;
   background: transparent;
   color: var(--neutral-on-background-weak);
-  border: 1px solid var(--neutral-alpha-weak);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-alpha-medium);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+  line-height: 1.4;
 
   &:hover {
     background: var(--neutral-alpha-medium);
     color: var(--neutral-on-background-strong);
-    border-color: var(--neutral-alpha-medium);
+    border-color: var(--neutral-alpha-strong);
+    transform: translateY(-1px);
   }
 
   &.active {
     background: var(--brand-alpha-weak);
     color: var(--brand-solid);
     border-color: var(--brand-alpha-medium);
-    box-shadow: 0 0 16px var(--brand-alpha-weak), inset 0 0 8px var(--brand-alpha-weak);
+    box-shadow:
+      0 0 0 1px var(--brand-alpha-weak),
+      0 0 16px var(--brand-alpha-weak);
     font-weight: 600;
   }
 }
@@ -62,23 +98,24 @@
 .toggleContainer {
   display: flex;
   background: var(--neutral-alpha-weak);
-  padding: 0.2rem;
+  padding: 0.18rem;
   border-radius: 10px;
-  gap: 0.2rem;
-  border: 1px solid var(--neutral-alpha-weak);
+  gap: 0.18rem;
+  border: 1px solid var(--neutral-alpha-medium);
 }
 
 .toggleBtn {
   display: flex;
   align-items: center;
+  gap: 0.4rem;
   justify-content: center;
-  padding: 0.35rem 0.9rem;
+  padding: 0.32rem 0.8rem;
   border-radius: 8px;
   cursor: pointer;
   background: transparent;
   color: var(--neutral-on-background-weak);
   border: 1px solid transparent;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   font-family: var(--font-label);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,41 +133,58 @@
   }
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.75rem;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
+/* ── Card Grid ────────────────────────────────── */
+.projectsGrid,
 .projectsList {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
   width: 100%;
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fadeInUp {
+/* ── Card reveal (staggered) ─────────────────── */
+.cardReveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  // When container is visible, run animations
+  .visible & {
+    animation-play-state: running;
+  }
+}
+
+@keyframes cardFadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-// Indicator hover support (original code fallback)
+/* ── Empty State ──────────────────────────────── */
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: var(--neutral-on-background-weak);
+  font-size: 0.9rem;
+  font-family: var(--font-label);
+  border: 1px dashed var(--neutral-alpha-medium);
+  border-radius: 14px;
+  text-align: center;
+
+  strong {
+    color: var(--brand-solid);
+  }
+}
+
+/* ── Legacy ───────────────────────────────────── */
 .hover {
   transition: var(--transition-micro-medium);
   &:hover {
     transform: translateX(var(--static-space-8));
-    .indicator {
-      transform: rotate(0);
-    }
+    .indicator { transform: rotate(0); }
   }
 }
 
