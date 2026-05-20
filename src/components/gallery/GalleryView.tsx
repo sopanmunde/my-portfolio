@@ -10,7 +10,8 @@ export default function GalleryView() {
         <Media
           enlarge
           priority={index < 10}
-          sizes="(max-width: 560px) 100vw, 50vw"
+          // (max-width: 560px) 100vw, 50vw
+          sizes="flexible"
           key={index}
           radius="m"
           aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}

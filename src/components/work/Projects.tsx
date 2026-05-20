@@ -1,6 +1,5 @@
 import { getPosts } from "@/utils/utils";
-import { Column } from "@once-ui-system/core";
-import { ProjectCard } from "@/components";
+import { ProjectsClient } from "./ProjectsClient";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -23,21 +22,27 @@ export function Projects({ range, exclude }: ProjectsProps) {
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
     : sortedProjects;
 
+  // Map to a clean object to avoid non-serializable elements
+  const serializedProjects = displayedProjects.map(project => ({
+    slug: project.slug,
+    content: project.content,
+    metadata: {
+      title: project.metadata.title,
+      publishedAt: project.metadata.publishedAt,
+      summary: project.metadata.summary,
+      image: project.metadata.image,
+      images: project.metadata.images,
+      tag: project.metadata.tag,
+      tags: project.metadata.tags || [],
+      team: project.metadata.team || [],
+      link: project.metadata.link,
+    }
+  }));
+
   return (
-    <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      {displayedProjects.map((post, index) => (
-        <ProjectCard
-          priority={index < 2}
-          key={post.slug}
-          href={`/work/${post.slug}`}
-          images={post.metadata.images}
-          title={post.metadata.title}
-          description={post.metadata.summary}
-          content={post.content}
-          avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-          link={post.metadata.link || ""}
-        />
-      ))}
-    </Column>
+    <ProjectsClient 
+      projects={serializedProjects} 
+      showControls={!range}
+    />
   );
 }

@@ -65,7 +65,7 @@ const home: Home = {
   },
   subline: (
     <>
-       {/* I'm Sopan, a Data Scientist engineer at{" "}
+      {/* I'm Sopan, a Data Scientist engineer at{" "}
        <Logo
         dark
         icon=""
@@ -101,8 +101,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Sopan is a Software Developer specializing in AI/ML, Python, SQL, and data visualization. 
-        Experienced in building intelligent solutions such as an AI-powered Waste Management System. 
+        Sopan is a Software Developer specializing in AI/ML, Python, SQL, and data visualization.
+        Experienced in building intelligent solutions such as an AI-powered Waste Management System.
         Skilled in GenAI, Agentic AI, and problem-solving, with a passion for creating impactful and scalable software innovations.
       </>
     ),
@@ -111,7 +111,7 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
-    {
+      {
         company: "Prushal Technology Pvt. Ltd.",
         timeframe: "2025 - 2025",
         role: "AIML Engineer Trainee",
@@ -120,8 +120,8 @@ const about: About = {
             Applied EDA, ML, and SQL with Python to enhance data analysis and support data-driven decision-making.
           </>,
           <>
-           Built predictive models and designed data visualizations using Seaborn and Pandas, 
-           improving interpretation and presentation of insights.
+            Built predictive models and designed data visualizations using Seaborn and Pandas,
+            improving interpretation and presentation of insights.
           </>,
           <>
             Leveraged statistical analysis and feature engineering techniques to boost model accuracy and performance.
@@ -135,11 +135,11 @@ const about: About = {
         role: "AI with Data Scientist",
         achievements: [
           <>
-            Completed formal training in AI and Data Science, gaining expertise in Python, MySQL, 
+            Completed formal training in AI and Data Science, gaining expertise in Python, MySQL,
             and machine learning algorithms to design efficient data-driven solutions.
           </>,
           <>
-            Built hands-on projects in predictive modeling and data cleaning, 
+            Built hands-on projects in predictive modeling and data cleaning,
             strengthening problem-solving skills in Python and delivering more accurate data analysis and insights.
           </>,
         ],
@@ -156,8 +156,8 @@ const about: About = {
             Applied EDA, ML, and SQL with Python to enhance data analysis and support data-driven decision-making.
           </>,
           <>
-           Built predictive models and designed data visualizations using Seaborn and Pandas, 
-           improving interpretation and presentation of insights.
+            Built predictive models and designed data visualizations using Seaborn and Pandas,
+            improving interpretation and presentation of insights.
           </>,
           <>
             Leveraged statistical analysis and feature engineering techniques to boost model accuracy and performance.
@@ -284,7 +284,7 @@ const about: About = {
           {
             name: "Gemini",
             icon: "gemini",
-          },  
+          },
 
           {
             name: "FastAPI",
@@ -377,7 +377,7 @@ const about: About = {
       },
 
 
-      
+
       {
         title: "Next.js",
         description: (
@@ -393,7 +393,7 @@ const about: About = {
             icon: "nextjs",
           },
         ],
-      },  
+      },
     ],
   },
 };

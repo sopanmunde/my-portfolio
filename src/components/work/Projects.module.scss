@@ -1,17 +1,141 @@
+.projectsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.controlsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--neutral-alpha-weak);
+  border: 1px solid var(--neutral-alpha-weak);
+  border-radius: 14px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.filtersWrapper {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.filterChip {
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-family: var(--font-label);
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: var(--neutral-on-background-weak);
+  border: 1px solid var(--neutral-alpha-weak);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+
+  &:hover {
+    background: var(--neutral-alpha-medium);
+    color: var(--neutral-on-background-strong);
+    border-color: var(--neutral-alpha-medium);
+  }
+
+  &.active {
+    background: var(--brand-alpha-weak);
+    color: var(--brand-solid);
+    border-color: var(--brand-alpha-medium);
+    box-shadow: 0 0 16px var(--brand-alpha-weak), inset 0 0 8px var(--brand-alpha-weak);
+    font-weight: 600;
+  }
+}
+
+.toggleContainer {
+  display: flex;
+  background: var(--neutral-alpha-weak);
+  padding: 0.2rem;
+  border-radius: 10px;
+  gap: 0.2rem;
+  border: 1px solid var(--neutral-alpha-weak);
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--neutral-on-background-weak);
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font-label);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: var(--neutral-on-background-strong);
+    background: var(--neutral-alpha-medium);
+  }
+
+  &.active {
+    background: var(--brand-alpha-weak);
+    color: var(--brand-solid);
+    border-color: var(--brand-alpha-medium);
+    box-shadow: 0 0 10px var(--brand-alpha-weak);
+  }
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Indicator hover support (original code fallback)
 .hover {
-    transition: var(--transition-micro-medium);
-
-    &:hover {
-        transform: translateX(var(--static-space-8));
-
-        .indicator {
-            transform: rotate(0);
-        }
+  transition: var(--transition-micro-medium);
+  &:hover {
+    transform: translateX(var(--static-space-8));
+    .indicator {
+      transform: rotate(0);
     }
+  }
 }
 
 .indicator {
-    transform: rotate(-90deg);
-    left: -2rem;
-    transition: var(--transition-micro-medium);
+  transform: rotate(-90deg);
+  left: -2rem;
+  transition: var(--transition-micro-medium);
 }
