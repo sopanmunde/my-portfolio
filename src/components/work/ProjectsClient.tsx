@@ -79,8 +79,8 @@ export function ProjectsClient({ projects, showControls = true }: ProjectsClient
               aria-label="Grid view"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-                <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+                <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" />
               </svg>
               Grid
             </button>
@@ -91,8 +91,8 @@ export function ProjectsClient({ projects, showControls = true }: ProjectsClient
               aria-label="List view"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="3" y="4" width="18" height="3" rx="1"/><rect x="3" y="10.5" width="18" height="3" rx="1"/>
-                <rect x="3" y="17" width="18" height="3" rx="1"/>
+                <rect x="3" y="4" width="18" height="3" rx="1" /><rect x="3" y="10.5" width="18" height="3" rx="1" />
+                <rect x="3" y="17" width="18" height="3" rx="1" />
               </svg>
               List
             </button>

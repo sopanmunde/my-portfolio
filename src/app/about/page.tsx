@@ -17,6 +17,7 @@ import TableOfContents from "@/components/about/TableOfContents";
 import { SpotlightCard } from "@/components/about/SpotlightCard";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
+import { ResumeButton } from "@/components";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -78,7 +79,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+      <Row fillWidth s={{ direction: "column" }} horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -195,6 +196,15 @@ export default function About() {
                 )}
               </Row>
             )}
+            <Row
+              className={styles.blockAlign}
+              paddingTop="8"
+              paddingBottom="8"
+              horizontal="center"
+              fitWidth
+            >
+              <ResumeButton id="download-resume-about" />
+            </Row>
           </Column>
 
           {about.intro.display && (
