@@ -1,7 +1,7 @@
 "use client";
 
 import { Media, MasonryGrid } from "@once-ui-system/core";
-import { gallery } from "@/resources";
+import { gallery } from "@/resources/content";
 
 export default function GalleryView() {
   return (

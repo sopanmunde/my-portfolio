@@ -1,7 +1,10 @@
 import { Column, Heading, Meta, Row, Schema, Text } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL } from "@/resources/once-ui.config";
+import { about, person, work } from "@/resources/content";
 import { Projects } from "@/components/work/Projects";
 import styles from "./work.module.css";
+
+// Force hot-reload to register newly added MDX files
 
 export async function generateMetadata() {
   return Meta.generate({

@@ -61,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       onMouseMove={handleMouseMove}
-      className={styles.cardWrapper}
+      className={`${styles.cardWrapper} ${layout === "grid" ? styles.gridLayout : styles.listLayout}`}
     >
       {/* ── Image Section with navigation ── */}
       <div className={styles.imageSection}>
@@ -126,7 +126,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* Header row: title + meta */}
         <div className={styles.cardHeader}>
           {title && (
-            <Heading as="h2" wrap="balance" variant="heading-strong-l" className={styles.titleText}>
+            <Heading
+              as="h2"
+              wrap="balance"
+              variant={layout === "grid" ? "heading-strong-m" : "heading-strong-l"}
+              className={styles.titleText}
+            >
               {title}
             </Heading>
           )}

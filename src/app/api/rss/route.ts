@@ -1,5 +1,6 @@
 import { getPosts } from "@/utils/utils";
-import { baseURL, blog, person } from "@/resources";
+import { baseURL } from "@/resources/once-ui.config";
+import { blog, person } from "@/resources/content";
 import { NextResponse } from "next/server";
 
 export async function GET() {

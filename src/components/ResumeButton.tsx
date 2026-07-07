@@ -3,7 +3,6 @@
 import React from "react";
 import { Icon } from "@once-ui-system/core";
 import styles from "./ResumeButton.module.scss";
-
 interface ResumeButtonProps {
   id?: string;
   href?: string;

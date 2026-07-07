@@ -12,7 +12,8 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL } from "@/resources/once-ui.config";
+import { about, person, social } from "@/resources/content";
 import TableOfContents from "@/components/about/TableOfContents";
 import { SpotlightCard } from "@/components/about/SpotlightCard";
 import styles from "@/components/about/about.module.scss";

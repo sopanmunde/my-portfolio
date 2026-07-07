@@ -11,10 +11,13 @@ import {
   Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
+import { baseURL, routes } from "@/resources/once-ui.config";
+import { home, about, person } from "@/resources/content";
 import { Mailchimp, ResumeButton } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+
+// Trigger hot reload for newly added projects
 
 export async function generateMetadata() {
   return Meta.generate({

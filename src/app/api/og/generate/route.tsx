@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import { baseURL, person } from "@/resources";
+import { baseURL } from "@/resources/once-ui.config";
+import { person } from "@/resources/content";
 
 export const runtime = "nodejs";
 

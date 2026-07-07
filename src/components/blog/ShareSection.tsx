@@ -1,7 +1,7 @@
 "use client";
 
 import { Row, Text, Button, useToast } from "@once-ui-system/core";
-import { socialSharing } from "@/resources";
+import { socialSharing } from "@/resources/once-ui.config";
 
 interface ShareSectionProps {
   title: string;

@@ -2,7 +2,7 @@
 
 import { Card, Column, Media, Row, Avatar, Text } from "@once-ui-system/core";
 import { formatDate } from "@/utils/formatDate";
-import { person } from "@/resources";
+import { person } from "@/resources/content";
 
 interface PostProps {
   post: any;
