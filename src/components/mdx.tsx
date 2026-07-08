@@ -7,7 +7,7 @@ import {
   HeadingLink,
   Text,
   InlineCode,
-  CodeBlock,
+  CodeBlock as OnceCodeBlock,
   TextProps,
   MediaProps,
   Accordion,
@@ -26,6 +26,20 @@ import {
   ListItem,
   Line,
 } from "@once-ui-system/core";
+
+interface CodeBlockProps {
+  codes?: Array<{
+    code: string;
+    language?: string;
+    label?: string;
+  }>;
+  [key: string]: any;
+}
+
+const CodeBlock = ({ codes, ...props }: CodeBlockProps) => {
+  const safeCodes = codes && codes.length > 0 ? codes : [{ code: "", language: "text", label: "Code" }];
+  return <OnceCodeBlock codes={safeCodes} {...props} />;
+};
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
