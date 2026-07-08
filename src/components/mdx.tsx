@@ -27,18 +27,16 @@ import {
   Line,
 } from "@once-ui-system/core";
 
-interface CodeBlockProps {
-  codes?: Array<{
-    code: string;
-    language?: string;
-    label?: string;
-  }>;
-  [key: string]: any;
-}
+const CodeBlock = ({ codes, ...props }: any) => {
+  const safeCodes = codes && codes.length > 0
+    ? codes.map((c: any) => ({
+        ...c,
+        language: c.language || "text",
+        label: c.label || "Code",
+      }))
+    : [{ code: "", language: "text", label: "Code" }];
 
-const CodeBlock = ({ codes, ...props }: CodeBlockProps) => {
-  const safeCodes = codes && codes.length > 0 ? codes : [{ code: "", language: "text", label: "Code" }];
-  return <OnceCodeBlock codes={safeCodes} {...props} />;
+  return <OnceCodeBlock codes={safeCodes as any} {...props} />;
 };
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
